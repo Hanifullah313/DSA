@@ -11,12 +11,10 @@ public class SearchtowDmatrix {
                 if (target == matrix[i][j]) {
                     System.out.println("The Index of Target Interger is : row = " + i + " column= " + j);
                 }
-                }
-
             }
-        }
 
-    
+        }
+    }
 
     static public boolean searchMatrix(int[][] matrix, int target) {
         int row = matrix.length;
