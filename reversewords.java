@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
-
+//day 10
 public class reversewords {
     static public String reverseWords(String s) {
         s = s.trim();
@@ -14,8 +14,8 @@ public class reversewords {
         String s2 = "  hello world  ";
         String s3 = "a good   example";
 
-        System.out.println(reverseWords(s1)); // Output: "blue is sky the"
-        System.out.println(reverseWords(s2)); // Output: "world hello"
-        System.out.println(reverseWords(s3)); // Output: "Java"
+        System.out.println(reverseWords(s1)); 
+        System.out.println(reverseWords(s2)); 
+        System.out.println(reverseWords(s3)); 
     }
 }

@@ -1,3 +1,5 @@
+
+//day 10
 public class currencesremove {
     static public String removeOccurrences(String s, String part) {
         StringBuilder sb = new StringBuilder(s);
