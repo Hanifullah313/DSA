@@ -3,7 +3,7 @@ public class ssort {
         for (int j = 0; j < a.length; j++) {
             System.out.print(a[j] + " ");
         }
-        System.out.println(); // just for neat output
+        System.out.println(); 
     }
 
     public static void main(String[] args) {
@@ -24,6 +24,6 @@ public class ssort {
             arr[i] = temp;
         }
 
-        print(arr); // Output: 1 2 3 7 8
+        print(arr); // Output
     }
 }
