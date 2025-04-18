@@ -8,7 +8,6 @@ public class Sumnatural {
         sum += i;
         Printsum(i + 1, n, sum);
     }
-
     public static void main(String[] args) {
         Printsum(1, 5, 0);
     }
