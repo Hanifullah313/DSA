@@ -1,5 +1,3 @@
-
-
 public class printNumber {
     public static void print(int n) {
         if (n == 0) {
