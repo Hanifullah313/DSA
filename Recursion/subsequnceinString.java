@@ -1,5 +1,4 @@
 public class subsequnceinString {
-
     public static void subsequence(String str, int index, String newstring) {
         if (index == str.length()) {
             System.out.println(newstring);
