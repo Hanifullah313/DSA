@@ -1,16 +1,5 @@
 public class QuickSort {
-    public static void main(String[] args) {
-        int arr[] = {6, 3, 9, 5, 2, 8, 7};
-        int n = arr.length;
-
-        quickSort(arr, 0, n - 1);
-
-        // Print sorted array
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-    }
-
+    
     // QuickSort function
     public static void quickSort(int arr[], int low, int high) {
         if (low < high) {
@@ -39,5 +28,16 @@ public class QuickSort {
         arr[i + 1] = arr[high];
         arr[high] = temp;
         return i + 1; // Return pivot index
+    }
+    public static void main(String[] args) {
+        int arr[] = {6, 3, 9, 5, 2, 8, 7};
+        int n = arr.length;
+
+        quickSort(arr, 0, n - 1);
+
+        // Print sorted array
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }

@@ -36,13 +36,19 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 6, 3, 9, 5, 2, 8 };
+        int arr[] = { 5, 2, 3, 1 };
+        int arr1[] = { 5, 1, 1, 2, 0, 0 };
         int n = arr.length;
-        divide(arr, 0, n - 1); // Call divide to sort the array
-        // Print the sorted array
+        divide(arr, 0, n - 1);
         System.out.println("Sorted Array:");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
+        }
+        System.out.println(" ");
+        int n1 = arr1.length;
+        divide(arr1, 0, n1 - 1);
+        for (int i = 0; i < n1; i++) {
+            System.out.print(arr1[i] + " ");
         }
     }
 }
