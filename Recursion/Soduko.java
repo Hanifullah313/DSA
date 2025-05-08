@@ -61,6 +61,6 @@ public class Soduko {
 
     public static void main(String[] args) {
         char[][] board=new char[0][0];
-        helper(board, 9, 9);
+        helper(board, 0, 0);
     }
 }
