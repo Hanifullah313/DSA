@@ -1,18 +1,26 @@
 import java.util.*;
+
 public class StackCF {
+    public static void pushAtBottum(int data, Stack<Integer> s) {
+        if (s.isEmpty()) {
+            s.push(data);
+            return;
+        }
+        int top = s.pop();
+        pushAtBottum(data, s);
+        s.push(top);
+    }
+
     public static void main(String[] args) {
-       Stack<Integer> List = new Stack<>(); 
-         List.push(1);
+        Stack<Integer> List = new Stack<>();
+        List.push(1);
         List.push(2);
         List.push(3);
-        List.push(4);
-        List.push(05);
-        List.push(06);
-        List.push(07);
+        pushAtBottum(4, List);
         while (!List.isEmpty()) {
             System.out.println(List.peek());
             List.pop();
         }
 
     }
-    }
+}
