@@ -1,4 +1,4 @@
-public class NodeCount {
+public class HieghtOfNode{
     static class Node {
         int data;
         Node left, right;
@@ -25,18 +25,19 @@ public class NodeCount {
         }
     }
 
-    public static int CountOFNodes(Node root) {
+    public static int SumOFNodes(Node root) {
         if (root == null) {
             return 0;
         }
-        int leftNodes = CountOFNodes(root.left);
-        int rightNodes = CountOFNodes(root.right);
-        return leftNodes + rightNodes + 1;
+        int leftHieght = SumOFNodes(root.left);
+        int rightHieght = SumOFNodes(root.right);
+        int myheight = Math.max(leftHieght, rightHieght)+1;
+        return myheight;
     }
 
     public static void main(String[] args) {
         int[] node = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
         Node root = BinaryTree.BuildTree(node);
-        System.out.println(CountOFNodes(root));
+        System.out.println(SumOFNodes(root));
     }
 }

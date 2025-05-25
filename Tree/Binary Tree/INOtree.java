@@ -57,7 +57,7 @@ public class INOtree {
         Node root = BinaryTree.BuildTree(node);
 
         // Print the data of the root node to confirm tree was built
-        System.out.println(root.data);
+       // System.out.println(root.data);
         inOrder(root);
     }
 }
