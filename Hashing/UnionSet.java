@@ -17,6 +17,7 @@ public class UnionSet {
     public static void main(String[] args) {
       int set1[]={1,2,4,5};
       int set2[]={1,2,4,5,7,5,7,8,90};
-      Union(set1,set2);
+      System.out.println(Union(set1,set2));
+      
     }
 }
