@@ -1,7 +1,7 @@
 package Hashing;
 
 import java.util.*;
-
+//O(n)
 public class UnionSet {
     public static int Union(int set1[], int set2[]) {
         HashSet<Integer> Union = new HashSet<>();

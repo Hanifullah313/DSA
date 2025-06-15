@@ -29,7 +29,6 @@ public class Cities {
         String start = getStart(tickets);
         System.out.println("Start City: " + start);
 
-        // Optional: Print the full path
         System.out.println("Full Route:");
         while (start != null && tickets.containsKey(start)) {
             String next = tickets.get(start);
