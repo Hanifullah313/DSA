@@ -1,4 +1,4 @@
-public class WordBreak {
+public class StartWith {
     static class Node {
         Node[] Children = new Node[26];
         boolean eow = false;
@@ -30,26 +30,30 @@ public class WordBreak {
         return curr.eow;
     }
 
-    public static boolean Wordbrek(String word) {
-        if (word.length() == 0) {
-            return true;
-        }
-        for (int i = 1; i <= word.length(); i++) { 
-            String Firstpart = word.substring(0, i);
-            String Secpart = word.substring(i);
-            if (search(Firstpart) && Wordbrek(Secpart)) {
-                return true;
+    public static boolean StartW(String prefix) {
+        Node curr = root;
+        for (int i = 0; i < prefix.length(); i++) {
+            char c = prefix.charAt(i);
+            // Validate character is lowercase a-z
+            if (c < 'a' || c > 'z') {
+                return false;
             }
+            int idx = c - 'a';
+            if (curr.Children[idx] == null) {
+                return false;
+            }
+            curr = curr.Children[idx];
         }
-        return false;
+        return true;
     }
 
     public static void main(String[] args) {
-        String words[] = { "i", "like", "samsung" };
-        String key = "ilikesamsung";
+        String words[] = {"apple", "app", "mango", "women", "child"};
+        String prefix = "app";
+
         for (String word : words) {
             insert(word);
         }
-        System.out.println(Wordbrek(key)); 
+        System.out.println(StartW(prefix)); // Now returns true
     }
 }
