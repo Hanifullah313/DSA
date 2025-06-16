@@ -30,30 +30,24 @@ public class StartWith {
         return curr.eow;
     }
 
-    public static boolean StartW(String prefix) {
-        Node curr = root;
-        for (int i = 0; i < prefix.length(); i++) {
-            char c = prefix.charAt(i);
-            // Validate character is lowercase a-z
-            if (c < 'a' || c > 'z') {
-                return false;
-            }
-            int idx = c - 'a';
-            if (curr.Children[idx] == null) {
-                return false;
-            }
-            curr = curr.Children[idx];
-        }
-        return true;
-    }
+    public static boolean startsWith(String prefix) {
+       Node curr = root;
+       for(int i=0; i<prefix.length(); i++) {
+           int idx = prefix.charAt(i)-'a';
+           if(curr.Children[idx] == null) {
+               return false;
+           }
+           curr = curr.Children[idx];
+       }
+       return true;
+   }
 
     public static void main(String[] args) {
         String words[] = {"apple", "app", "mango", "women", "child"};
         String prefix = "app";
-
         for (String word : words) {
             insert(word);
         }
-        System.out.println(StartW(prefix)); // Now returns true
+        System.out.println(startsWith(prefix)); // Now returns true
     }
 }
