@@ -1,3 +1,4 @@
+package Hashing;
 import java.util.*;
 public class HashMapCode {
     static class HashMap<K, V> { // generics

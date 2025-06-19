@@ -1,7 +1,8 @@
 package Graph;
+
 import java.util.*;
 
-public class BasicGraph {
+public class BFS {
     static class Edge {
         int src;
         int dis;
@@ -34,15 +35,29 @@ public class BasicGraph {
         graph[5].add(new Edge(6, 1));
     }
 
+    public static void bfs(ArrayList<Edge> graph[], int v) {
+        Queue<Integer> q = new LinkedList<>();
+        boolean vis[] = new boolean[v];
+        q.add(0);
+        while (!q.isEmpty()) {
+            int curr = q.remove();
+            if (vis[curr] == false) {
+                System.out.println(curr + " ");
+                vis[curr] = true;
+                for (int i = 0; i < graph[curr].size(); i++) {
+                    Edge e = graph[curr].get(i);
+                    q.add(e.dis);
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int v = 5; // vertices , size of graph
         @SuppressWarnings("unchecked")
         ArrayList<Edge> graph[] = new ArrayList[v];
         CreateGraph(graph);
-        // Print 2's neighbours
-         for (int i = 0; i < graph[1].size(); i++) {
-            Edge e =graph[1].get(i) ;
-            System.out.println(e.dis + " ");
-        }
+        bfs(graph, v);
+        
     }
 }
