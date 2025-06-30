@@ -53,6 +53,7 @@ public class PrintAllPaths {
     }
 
     public static void printAllPaths(ArrayList<Edge> graph[], int src, int tar, String path, boolean vis[]) {
+        //O(v^V)
         if (src == tar) {
             System.out.println(path);
             return;
